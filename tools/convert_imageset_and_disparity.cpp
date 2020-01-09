@@ -105,8 +105,8 @@ public:
         cv::Mat cv_img1;
         cv::Mat cv_img2;
 
-        cv_img1 = cv::imread(img1_filename, CV_LOAD_IMAGE_COLOR);
-        cv_img2 = cv::imread(img2_filename, CV_LOAD_IMAGE_COLOR);
+        cv_img1 = cv::imread(img1_filename, cv::IMREAD_COLOR);
+        cv_img2 = cv::imread(img2_filename, cv::IMREAD_COLOR);
         if (!cv_img1.data) LOG(FATAL) << "Could not open or find file " << img1_filename;
         if (!cv_img2.data) LOG(FATAL) << "Could not open or find file " << img2_filename;
 

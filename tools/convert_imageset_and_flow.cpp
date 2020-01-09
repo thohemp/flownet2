@@ -105,14 +105,14 @@ public:
         cv::Mat cv_img2;
         cv::Mat cv_occ;
 
-        cv_img1 = cv::imread(img1_filename, CV_LOAD_IMAGE_COLOR);
-        cv_img2 = cv::imread(img2_filename, CV_LOAD_IMAGE_COLOR);
+        cv_img1 = cv::imread(img1_filename, cv::IMREAD_COLOR);
+        cv_img2 = cv::imread(img2_filename, cv::IMREAD_COLOR);
         if (!cv_img1.data) LOG(FATAL) << "Could not open or find file " << img1_filename;
         if (!cv_img2.data) LOG(FATAL) << "Could not open or find file " << img2_filename;
 
         if(has_occlusions())
         {
-            cv_occ = cv::imread(occ_filename, CV_LOAD_IMAGE_GRAYSCALE);
+            cv_occ = cv::imread(occ_filename, cv::IMREAD_GRAYSCALE);
             if (!cv_occ.data) LOG(FATAL) << "Could not open or find file " << occ_filename;
         }
 
