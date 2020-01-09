@@ -1,3 +1,8 @@
+Fork from lmb-freiburg/flownet2 with added OpenCV4 Support
+==================
+
+
+
 Caffe for FlowNet2 
 ==================
 
